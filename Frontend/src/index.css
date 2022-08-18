@@ -1,11 +1,24 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-color: rgb(247, 225, 185);
+  background-image: linear-gradient(rgb(255 225 220), rgb(255 225 220));
+  background-position: 'center';
+  background-size: 'cover';
+  background-repeat: 'no-repeat';
+  width: '100vw';
+  height: '100vh';
   font-family: sans-serif;
+}
+
+html {
+    height: 100%;
+    margin: 0;
 }
 
 .container {
   display: flex;
   justify-content: center;
+  height: '100vh';
+}
+
+#root {
+  height: '100vh';
 }
