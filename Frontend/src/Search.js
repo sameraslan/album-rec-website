@@ -26,6 +26,11 @@ function Search() {
           title.replace(" ", "%20") +
           "/" +
           artist.replace(" ", "%20");
+        // const url =
+        // "https://album-recommender-system.herokuapp.com/flask/getSimilar/" +
+        // title.replace(" ", "%20") +
+        // "/" +
+        // artist.replace(" ", "%20");
         console.log(url);
         axios
           .get(url)
