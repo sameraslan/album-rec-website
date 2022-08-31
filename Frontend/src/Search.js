@@ -21,16 +21,16 @@ function Search() {
       if (title.length === 0 || artist.length === 0) {
         setGetMessage({ results: [] });
       } else {
-        const url =
-          "http://127.0.0.1:5000/flask/getSimilar/" +
-          title.replace(" ", "%20") +
-          "/" +
-          artist.replace(" ", "%20");
         // const url =
-        // "https://album-recommender-system.herokuapp.com/flask/getSimilar/" +
-        // title.replace(" ", "%20") +
-        // "/" +
-        // artist.replace(" ", "%20");
+        //   "http://127.0.0.1:5000/flask/getSimilar/" +
+        //   title.replace(" ", "%20") +
+        //   "/" +
+        //   artist.replace(" ", "%20");
+        const url =
+        "https://album-recommender-system.herokuapp.com/flask/getSimilar/" +
+        title.replace(" ", "%20") +
+        "/" +
+        artist.replace(" ", "%20");
         console.log(url);
         axios
           .get(url)
