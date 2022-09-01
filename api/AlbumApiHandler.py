@@ -1,5 +1,5 @@
 from flask_restful import Api, Resource, reqparse
-from Recommender import RecommendationAlg
+from Backend.Recommender import RecommendationAlg
 import json
 
 class AlbumApiHandler(Resource):
@@ -11,7 +11,7 @@ class AlbumApiHandler(Resource):
       'albums': json.dumps(recommended),
       }
 
-  # I can call post with the album title then return the titles of the albums that that are most similar
+  # I can call post with the album title then return the titles of the albums that are most similar
   def post(self):
     print(self)
     parser = reqparse.RequestParser()

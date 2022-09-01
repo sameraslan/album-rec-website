@@ -1,5 +1,5 @@
 from flask import Flask, send_from_directory
-from flask_restful import Api, Resource, reqparse
+from flask_restful import Api
 from flask_cors import CORS #comment this on deployment
 from api.AlbumApiHandler import AlbumApiHandler
 
@@ -11,5 +11,4 @@ api = Api(app)
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
-# api.add_resource(AlbumApiHandler, '/flask/hello')
 api.add_resource(AlbumApiHandler, '/flask/getSimilar/<title>/<artist>')

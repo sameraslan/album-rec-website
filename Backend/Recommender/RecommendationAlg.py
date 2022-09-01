@@ -166,7 +166,7 @@ def main(albumTitle, albumArtist):
     # all_data.drop_duplicates(subset=['Title', 'Artist'], keep='first', inplace=True) # Used this to remove duplicates and set to pkl
     # all_data.reset_index(drop=True, inplace=True) # Reset the indices since less albums now
 
-    all_data = pd.read_pickle('Recommender/all_data1.pkl') # Testing all_data1 which has duplicates removed (all_data has duplicates)
+    all_data = pd.read_pickle('Backend/Recommender/all_data1.pkl') # Testing all_data1 which has duplicates removed (all_data has duplicates)
     recommended = recommend(all_data, albumTitle, albumArtist)
     print(albumTitle, albumArtist)
     return recommended
